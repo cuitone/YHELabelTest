@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5167CE619CFB89800396A8D /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167CE519CFB89800396A8D /* TTTAttributedLabel.m */; };
+		A5167D0D19D0090D00396A8D /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167CFA19D0090D00396A8D /* CoreTextUtils.m */; };
+		A5167D0E19D0090D00396A8D /* NSAttributedString+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167CFD19D0090D00396A8D /* NSAttributedString+Attributes.m */; };
+		A5167D0F19D0090D00396A8D /* NSTextCheckingResult+ExtendedURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167CFF19D0090D00396A8D /* NSTextCheckingResult+ExtendedURL.m */; };
+		A5167D1019D0090D00396A8D /* OHAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167D0119D0090D00396A8D /* OHAttributedLabel.m */; };
+		A5167D1119D0090D00396A8D /* OHParagraphStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167D0319D0090D00396A8D /* OHParagraphStyle.m */; };
+		A5167D1219D0090D00396A8D /* OHTouchesGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167D0519D0090D00396A8D /* OHTouchesGestureRecognizer.m */; };
+		A5167D1319D0090D00396A8D /* OHASBasicHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167D0819D0090D00396A8D /* OHASBasicHTMLParser.m */; };
+		A5167D1419D0090D00396A8D /* OHASBasicMarkupParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167D0A19D0090D00396A8D /* OHASBasicMarkupParser.m */; };
+		A5167D1519D0090D00396A8D /* OHASMarkupParserBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167D0C19D0090D00396A8D /* OHASMarkupParserBase.m */; };
 		A5BDE17819CC070E0099C9B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDE17719CC070E0099C9B5 /* main.m */; };
 		A5BDE17B19CC070E0099C9B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDE17A19CC070E0099C9B5 /* AppDelegate.m */; };
 		A5BDE17E19CC070E0099C9B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDE17D19CC070E0099C9B5 /* ViewController.m */; };
@@ -14,6 +24,7 @@
 		A5BDE18319CC070E0099C9B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5BDE18219CC070E0099C9B5 /* Images.xcassets */; };
 		A5BDE18619CC070E0099C9B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BDE18419CC070E0099C9B5 /* LaunchScreen.xib */; };
 		A5BDE19219CC070F0099C9B5 /* YHELabelTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDE19119CC070F0099C9B5 /* YHELabelTestTests.m */; };
+		A5BDE19D19CC07240099C9B5 /* YHELabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDE19C19CC07240099C9B5 /* YHELabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +38,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5167CE419CFB89800396A8D /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		A5167CE519CFB89800396A8D /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		A5167CF919D0090D00396A8D /* CoreTextUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
+		A5167CFA19D0090D00396A8D /* CoreTextUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
+		A5167CFC19D0090D00396A8D /* NSAttributedString+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Attributes.h"; sourceTree = "<group>"; };
+		A5167CFD19D0090D00396A8D /* NSAttributedString+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Attributes.m"; sourceTree = "<group>"; };
+		A5167CFE19D0090D00396A8D /* NSTextCheckingResult+ExtendedURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextCheckingResult+ExtendedURL.h"; sourceTree = "<group>"; };
+		A5167CFF19D0090D00396A8D /* NSTextCheckingResult+ExtendedURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextCheckingResult+ExtendedURL.m"; sourceTree = "<group>"; };
+		A5167D0019D0090D00396A8D /* OHAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHAttributedLabel.h; sourceTree = "<group>"; };
+		A5167D0119D0090D00396A8D /* OHAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHAttributedLabel.m; sourceTree = "<group>"; };
+		A5167D0219D0090D00396A8D /* OHParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHParagraphStyle.h; sourceTree = "<group>"; };
+		A5167D0319D0090D00396A8D /* OHParagraphStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHParagraphStyle.m; sourceTree = "<group>"; };
+		A5167D0419D0090D00396A8D /* OHTouchesGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTouchesGestureRecognizer.h; sourceTree = "<group>"; };
+		A5167D0519D0090D00396A8D /* OHTouchesGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTouchesGestureRecognizer.m; sourceTree = "<group>"; };
+		A5167D0719D0090D00396A8D /* OHASBasicHTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHASBasicHTMLParser.h; sourceTree = "<group>"; };
+		A5167D0819D0090D00396A8D /* OHASBasicHTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHASBasicHTMLParser.m; sourceTree = "<group>"; };
+		A5167D0919D0090D00396A8D /* OHASBasicMarkupParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHASBasicMarkupParser.h; sourceTree = "<group>"; };
+		A5167D0A19D0090D00396A8D /* OHASBasicMarkupParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHASBasicMarkupParser.m; sourceTree = "<group>"; };
+		A5167D0B19D0090D00396A8D /* OHASMarkupParserBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHASMarkupParserBase.h; sourceTree = "<group>"; };
+		A5167D0C19D0090D00396A8D /* OHASMarkupParserBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHASMarkupParserBase.m; sourceTree = "<group>"; };
 		A5BDE17219CC070E0099C9B5 /* YHELabelTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHELabelTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BDE17619CC070E0099C9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5BDE17719CC070E0099C9B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +71,8 @@
 		A5BDE18B19CC070E0099C9B5 /* YHELabelTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YHELabelTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BDE19019CC070F0099C9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5BDE19119CC070F0099C9B5 /* YHELabelTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHELabelTestTests.m; sourceTree = "<group>"; };
+		A5BDE19B19CC07240099C9B5 /* YHELabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHELabel.h; sourceTree = "<group>"; };
+		A5BDE19C19CC07240099C9B5 /* YHELabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHELabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +93,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5167CF719D0090D00396A8D /* OHAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				A5167CF819D0090D00396A8D /* PrivateUtils */,
+				A5167CFB19D0090D00396A8D /* Source */,
+				A5167D0619D0090D00396A8D /* TagParsers */,
+			);
+			path = OHAttributedLabel;
+			sourceTree = "<group>";
+		};
+		A5167CF819D0090D00396A8D /* PrivateUtils */ = {
+			isa = PBXGroup;
+			children = (
+				A5167CF919D0090D00396A8D /* CoreTextUtils.h */,
+				A5167CFA19D0090D00396A8D /* CoreTextUtils.m */,
+			);
+			path = PrivateUtils;
+			sourceTree = "<group>";
+		};
+		A5167CFB19D0090D00396A8D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A5167CFC19D0090D00396A8D /* NSAttributedString+Attributes.h */,
+				A5167CFD19D0090D00396A8D /* NSAttributedString+Attributes.m */,
+				A5167CFE19D0090D00396A8D /* NSTextCheckingResult+ExtendedURL.h */,
+				A5167CFF19D0090D00396A8D /* NSTextCheckingResult+ExtendedURL.m */,
+				A5167D0019D0090D00396A8D /* OHAttributedLabel.h */,
+				A5167D0119D0090D00396A8D /* OHAttributedLabel.m */,
+				A5167D0219D0090D00396A8D /* OHParagraphStyle.h */,
+				A5167D0319D0090D00396A8D /* OHParagraphStyle.m */,
+				A5167D0419D0090D00396A8D /* OHTouchesGestureRecognizer.h */,
+				A5167D0519D0090D00396A8D /* OHTouchesGestureRecognizer.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		A5167D0619D0090D00396A8D /* TagParsers */ = {
+			isa = PBXGroup;
+			children = (
+				A5167D0719D0090D00396A8D /* OHASBasicHTMLParser.h */,
+				A5167D0819D0090D00396A8D /* OHASBasicHTMLParser.m */,
+				A5167D0919D0090D00396A8D /* OHASBasicMarkupParser.h */,
+				A5167D0A19D0090D00396A8D /* OHASBasicMarkupParser.m */,
+				A5167D0B19D0090D00396A8D /* OHASMarkupParserBase.h */,
+				A5167D0C19D0090D00396A8D /* OHASMarkupParserBase.m */,
+			);
+			path = TagParsers;
+			sourceTree = "<group>";
+		};
 		A5BDE16919CC070E0099C9B5 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +167,11 @@
 				A5BDE17A19CC070E0099C9B5 /* AppDelegate.m */,
 				A5BDE17C19CC070E0099C9B5 /* ViewController.h */,
 				A5BDE17D19CC070E0099C9B5 /* ViewController.m */,
+				A5BDE19B19CC07240099C9B5 /* YHELabel.h */,
+				A5BDE19C19CC07240099C9B5 /* YHELabel.m */,
+				A5167CE419CFB89800396A8D /* TTTAttributedLabel.h */,
+				A5167CE519CFB89800396A8D /* TTTAttributedLabel.m */,
+				A5167CF719D0090D00396A8D /* OHAttributedLabel */,
 				A5BDE17F19CC070E0099C9B5 /* Main.storyboard */,
 				A5BDE18219CC070E0099C9B5 /* Images.xcassets */,
 				A5BDE18419CC070E0099C9B5 /* LaunchScreen.xib */,
@@ -219,9 +306,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5167D1019D0090D00396A8D /* OHAttributedLabel.m in Sources */,
 				A5BDE17E19CC070E0099C9B5 /* ViewController.m in Sources */,
+				A5167D1519D0090D00396A8D /* OHASMarkupParserBase.m in Sources */,
+				A5167D0F19D0090D00396A8D /* NSTextCheckingResult+ExtendedURL.m in Sources */,
+				A5167D1319D0090D00396A8D /* OHASBasicHTMLParser.m in Sources */,
+				A5167D1219D0090D00396A8D /* OHTouchesGestureRecognizer.m in Sources */,
+				A5167D0D19D0090D00396A8D /* CoreTextUtils.m in Sources */,
 				A5BDE17B19CC070E0099C9B5 /* AppDelegate.m in Sources */,
+				A5167D1419D0090D00396A8D /* OHASBasicMarkupParser.m in Sources */,
+				A5167D1119D0090D00396A8D /* OHParagraphStyle.m in Sources */,
 				A5BDE17819CC070E0099C9B5 /* main.m in Sources */,
+				A5BDE19D19CC07240099C9B5 /* YHELabel.m in Sources */,
+				A5167D0E19D0090D00396A8D /* NSAttributedString+Attributes.m in Sources */,
+				A5167CE619CFB89800396A8D /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +510,7 @@
 				A5BDE19719CC070F0099C9B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5BDE19819CC070F0099C9B5 /* Build configuration list for PBXNativeTarget "YHELabelTestTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +519,7 @@
 				A5BDE19A19CC070F0099C9B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
