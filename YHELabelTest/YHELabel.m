@@ -17,10 +17,10 @@ static inline NSAttributedString * AttributedStringSetParaStyle(NSAttributedStri
     NSParagraphStyle *attributedStringParaStyle = attrDict[NSParagraphStyleAttributeName];
     if (attributedStringParaStyle) {
         NSMutableParagraphStyle *paraStyle = [attributedStringParaStyle mutableCopy];
-        paraStyle.lineSpacing = 5.0f;
         [mutableAttributedString addAttributes:@{NSParagraphStyleAttributeName:paraStyle} range:NSMakeRange(0, attributedString.length)];
     }
     return mutableAttributedString;
+    
 }
 
 @interface YHELabel ()
@@ -38,94 +38,6 @@ static inline NSAttributedString * AttributedStringSetParaStyle(NSAttributedStri
 @implementation YHELabel
 @dynamic drawFrameSetter;
 @dynamic highlightedDrawFrameSetter;
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
-//- (void)drawTextInRect:(CGRect)rect
-//{
-//    [super drawTextInRect:rect];
-//    return;
-//    
-//    CGContextRef context = UIGraphicsGetCurrentContext();
-//    CGContextSetTextMatrix(context, CGAffineTransformIdentity);//设置字形变换矩阵为CGAffineTransformIdentity，也就是说每一个字形都不做图形变换
-//    
-//    CTFramesetterRef ctFramesetter = CTFramesetterCreateWithAttributedString((CFMutableAttributedStringRef)self.attributedText);
-//    
-//    CGMutablePathRef path = CGPathCreateMutable();
-//    
-//    CGRect bounds = rect;
-////    bounds.size.height = 1000;
-//    
-//    CGPathAddRect(path, NULL, bounds);
-//    
-//    CTFrameRef ctFrame = CTFramesetterCreateFrame(ctFramesetter,CFRangeMake(0, 0), path, NULL);
-//    CTFrameDraw(ctFrame, context);
-//    return;
-//    
-//    CFArrayRef lines = CTFrameGetLines(ctFrame);
-//    
-//    NSInteger lineCount = CFArrayGetCount(lines);
-//    
-//    //计算边缘使其居中
-//    CGFloat bottomMargin = (rect.size.height - lineCount*self.font.lineHeight)/2;
-//    
-//    for (int i = 0; i < CFArrayGetCount(lines); i++) {
-//        CTLineRef line = CFArrayGetValueAtIndex(lines, i);
-//        CGPoint lineOrigin = CGPointZero;
-//        /**
-//         *  无论有没有emoji,行高是一样的。行高的计算是从左下角为坐标系统原点，绘制时文字是反向的，所以ascender在下面，而descender在上面。第0个起始点应该是
-//         *  bounds.size.height-ascender;
-//         */
-//        lineOrigin.y = self.font.lineHeight* (lineCount-i)-self.font.ascender;
-//        lineOrigin.y += bottomMargin;
-//        CGContextSetTextPosition(context, lineOrigin.x, lineOrigin.y);
-//        CTLineDraw(line, context);
-//        [self drawEmotionsWithContext:context ForLine:line withLineOrigin:lineOrigin];
-//    }
-//    
-//    CFRelease(ctFrame);
-//    CFRelease(path);
-//    CFRelease(ctFramesetter);
-//}
-//
-//- (void)drawEmotionsWithContext:(CGContextRef)context ForLine:(CTLineRef)line withLineOrigin:(CGPoint)lineOrigin
-//{
-//    CFArrayRef runs = CTLineGetGlyphRuns(line);
-//    for (int j = 0; j < CFArrayGetCount(runs); j++) {
-//        CGFloat runAscent;
-//        CGFloat runDescent;
-//        CGFloat runLeading;
-//        CTRunRef run = CFArrayGetValueAtIndex(runs, j);
-//        NSDictionary* attributes = (NSDictionary*)CTRunGetAttributes(run);
-//        CGRect runRect;
-//        runRect.size.width = CTRunGetTypographicBounds(run, CFRangeMake(0,0), &runAscent, &runDescent, &runLeading);
-//        runRect=CGRectMake(lineOrigin.x + CTLineGetOffsetForStringIndex(line, CTRunGetStringRange(run).location, NULL), lineOrigin.y, runRect.size.width, runAscent + runDescent);
-//        
-//        NSString *imageName = [attributes objectForKey:@"YHECustomEmotion"];
-//        
-//        //图片渲染逻辑
-//        if (imageName) {
-//            UIImage *image = [self.drawDelegate YHELabel:self willDrawEmotionWithTag:imageName];
-//            if (image) {
-//                CGRect imageDrawRect;
-//                imageDrawRect = CGRectMake(0, 0, 16, 16);
-//                imageDrawRect.origin.x = runRect.origin.x + lineOrigin.x;
-//                imageDrawRect.origin.y = lineOrigin.y + self.font.descender;
-//                CALayer *imageLayer = [CALayer layer];
-//                [imageLayer setContents:(__bridge id)image.CGImage];
-//                [imageLayer setBounds:CGRectMake(0, 0, 16, 16)];
-//                [imageLayer setMasksToBounds:YES];
-//                [imageLayer setPosition:CGPointMake(imageDrawRect.origin.x+8, imageDrawRect.origin.y+8)];
-//                [self.layer addSublayer:imageLayer];
-//            }
-//        }
-//    }
-//}
 
 - (void)dealloc
 {
@@ -180,6 +92,7 @@ static inline NSAttributedString * AttributedStringSetParaStyle(NSAttributedStri
 - (void)drawTextInRect:(CGRect)rect
 {
     [super drawTextInRect:rect];
+    return;
     
     NSAttributedString *originalAttributedText = nil;
     
@@ -251,8 +164,12 @@ static inline NSAttributedString * AttributedStringSetParaStyle(NSAttributedStri
                  inRect:(CGRect)rect
                 context:(CGContextRef)context
 {
+    CGSize suggestSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, textRange, NULL, CGSizeMake(rect.size.width, CGFLOAT_MAX), NULL);
+    
+    NSLog(@"Suggest size = %@ \n Draw Rect = %@",NSStringFromCGSize(suggestSize),NSStringFromCGRect(rect));
+    
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathAddRect(path, NULL, rect);
+    CGPathAddRect(path, NULL, CGRectMake(0, 0, suggestSize.width, suggestSize.height));
     CTFrameRef frame = CTFramesetterCreateFrame(framesetter, textRange, path, NULL);
     
     CFArrayRef lines = CTFrameGetLines(frame);
@@ -262,12 +179,29 @@ static inline NSAttributedString * AttributedStringSetParaStyle(NSAttributedStri
     CGPoint lineOrigins[numberOfLines];
     CTFrameGetLineOrigins(frame, CFRangeMake(0, numberOfLines), lineOrigins);
     
+    //计算边缘使其居中
+    CGFloat bottomMargin = (rect.size.height - numberOfLines*self.font.lineHeight)/2;
+    bottomMargin = MAX(bottomMargin, 0);
+    
     //开始绘制每一行
     for (CFIndex lineIndex = 0; lineIndex < numberOfLines; lineIndex++) {
         CGPoint lineOrigin = lineOrigins[lineIndex];
-        CGContextSetTextPosition(context, lineOrigin.x, lineOrigin.y);
-        CTLineRef line = CFArrayGetValueAtIndex(lines, lineIndex);
         
+        
+        CTLineRef line = CFArrayGetValueAtIndex(lines, lineIndex);
+        CGFloat ascent,descent,leading;
+        CTLineGetTypographicBounds(line, &ascent, &descent, &leading);
+        CGRect lineRect =  CTLineGetBoundsWithOptions(line, 0);
+        NSLog(@"suggest line draw y = %f",rect.size.height - lineOrigin.y);
+        lineOrigin.y = self.font.lineHeight*(numberOfLines-lineIndex)-self.font.ascender;
+//                lineOrigin.y += bottomMargin;
+        
+        CGContextSetTextPosition(context, lineOrigin.x, lineOrigin.y);
+        
+        
+        
+        NSLog(@"---%.2f,%.2f,%.2f,%.2f---%@",ascent,descent,leading,rect.size.height - lineOrigin.y,NSStringFromCGRect(lineRect));
+        NSLog(@"Draw line origin = %.2f",lineOrigin.y);
         if (lineIndex == numberOfLines - 1 && truncateLastLine) {
             CFRange lastLineRange = CTLineGetStringRange(line);
             //画省略号的条件
@@ -359,7 +293,6 @@ static inline NSAttributedString * AttributedStringSetParaStyle(NSAttributedStri
     
     CFRelease(frame);
     CFRelease(path);
-    
 }
 
 - (CGRect)textRectForBounds:(CGRect)bounds limitedToNumberOfLines:(NSInteger)numberOfLines

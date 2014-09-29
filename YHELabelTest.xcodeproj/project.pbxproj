@@ -17,6 +17,7 @@
 		A5167D1319D0090D00396A8D /* OHASBasicHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167D0819D0090D00396A8D /* OHASBasicHTMLParser.m */; };
 		A5167D1419D0090D00396A8D /* OHASBasicMarkupParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167D0A19D0090D00396A8D /* OHASBasicMarkupParser.m */; };
 		A5167D1519D0090D00396A8D /* OHASMarkupParserBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A5167D0C19D0090D00396A8D /* OHASMarkupParserBase.m */; };
+		A53C6BF319D90A7000FC3DD8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53C6BF219D90A7000FC3DD8 /* CoreText.framework */; };
 		A5BDE17819CC070E0099C9B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDE17719CC070E0099C9B5 /* main.m */; };
 		A5BDE17B19CC070E0099C9B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDE17A19CC070E0099C9B5 /* AppDelegate.m */; };
 		A5BDE17E19CC070E0099C9B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDE17D19CC070E0099C9B5 /* ViewController.m */; };
@@ -58,6 +59,7 @@
 		A5167D0A19D0090D00396A8D /* OHASBasicMarkupParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHASBasicMarkupParser.m; sourceTree = "<group>"; };
 		A5167D0B19D0090D00396A8D /* OHASMarkupParserBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHASMarkupParserBase.h; sourceTree = "<group>"; };
 		A5167D0C19D0090D00396A8D /* OHASMarkupParserBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHASMarkupParserBase.m; sourceTree = "<group>"; };
+		A53C6BF219D90A7000FC3DD8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		A5BDE17219CC070E0099C9B5 /* YHELabelTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHELabelTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BDE17619CC070E0099C9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5BDE17719CC070E0099C9B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53C6BF319D90A7000FC3DD8 /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +148,7 @@
 		A5BDE16919CC070E0099C9B5 = {
 			isa = PBXGroup;
 			children = (
+				A53C6BF219D90A7000FC3DD8 /* CoreText.framework */,
 				A5BDE17419CC070E0099C9B5 /* YHELabelTest */,
 				A5BDE18E19CC070F0099C9B5 /* YHELabelTestTests */,
 				A5BDE17319CC070E0099C9B5 /* Products */,
